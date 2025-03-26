@@ -4,32 +4,34 @@ media:
     output: /public/media
     categories: [image, video]
 content:
-  - name: videos
-    label: Videos
-    type: collection
-    path: 'src/videos'
-    filename: '{fields.title}.json'
-    view:
-      fields: [ title, published, date ]
+  - name: portfolio
+    label: Portfolio
+    type: file
+    path: 'src/_data/portfolio.json'
     fields:
-      - name: published
-        label: Published
-        type: boolean
-        default: true
-      - name: date
-        label: Date
-        type: date
-      - name: title
-        label: Title
-        type: string
-      - name: description
-        label: Body
-        type: text
       - name: media
         label: Media
-        type: file
-        options:
-          media: media
+        type: object
+        list: true
+        fields:
+          - name: published
+            label: Published
+            type: boolean
+            default: true
+          - name: date
+            label: Date
+            type: date
+          - name: title
+            label: Title
+            type: string
+          - name: description
+            label: Body
+            type: text
+          - name: file
+            label: Media File
+            type: file
+            options:
+              media: media
 
   - name: site
     label: Site settings
