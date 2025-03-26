@@ -6,6 +6,7 @@ content:
     label: Videos
     type: collection
     path: 'src/videos'
+    filename: '{fields.title}.json'
     view:
       fields: [ title, published, date ]
     fields:
@@ -22,6 +23,9 @@ content:
       - name: description
         label: Body
         type: text
+      - name: media
+        label: Media
+        type: image
   - name: site
     label: Site settings
     path: src/_data/site.json
