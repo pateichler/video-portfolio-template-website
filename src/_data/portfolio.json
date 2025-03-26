@@ -1,0 +1,16 @@
+{
+  "media": [
+    {
+      "published": true,
+      "title": "First video",
+      "description": "Video 1",
+      "file": "/public/media/green.mov"
+    },
+    {
+      "published": true,
+      "title": "Second video",
+      "description": "Video 2",
+      "file": "/public/media/purple.mov"
+    }
+  ]
+}
