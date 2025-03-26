@@ -1,7 +1,8 @@
 media:
-  input: src/public/videos
-  output: /public/videos
-  categories: [image, video]
+  - name: media
+    input: src/public/media
+    output: /public/media
+    categories: [image, video]
 content:
   - name: videos
     label: Videos
@@ -27,6 +28,9 @@ content:
       - name: media
         label: Media
         type: image
+        options:
+          media: media
+
   - name: site
     label: Site settings
     path: src/_data/site.json
