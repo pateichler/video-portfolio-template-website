@@ -1,6 +1,7 @@
 media:
-  input: src/public
-  output: /public
+  input: src/public/videos
+  output: /public/videos
+  categories: [image, video]
 content:
   - name: videos
     label: Videos
