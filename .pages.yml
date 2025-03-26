@@ -27,7 +27,7 @@ content:
         type: text
       - name: media
         label: Media
-        type: image
+        type: file
         options:
           media: media
 
