@@ -47,7 +47,7 @@ content:
         type: string
       - name: description
         label: Section description
-        type: string
+        type: text
   - name: site
     label: Site settings
     path: src/_data/site.json
@@ -58,4 +58,4 @@ content:
         type: string
       - name: description
         label: Website description
-        type: string
+        type: text
