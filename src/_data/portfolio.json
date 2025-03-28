@@ -4,13 +4,22 @@
       "published": true,
       "title": "First video",
       "description": "Video 1",
-      "file": "/public/media/green.mov"
+      "file": "/public/media/green.mov",
+      "thumb": "/public/media/thumbGreen.png"
     },
     {
       "published": true,
       "title": "Second video",
       "description": "Video 2",
-      "file": "/public/media/purple.mov"
+      "file": "/public/media/purple.mov",
+      "thumb": "/public/media/thumbPurple.png"
+    },
+    {
+      "published": true,
+      "title": "Third video",
+      "description": "Video 3",
+      "file": "/public/media/blue.mp4",
+      "thumb": "/public/media/thumbBlue.png"
     }
   ]
 }

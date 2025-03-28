@@ -32,7 +32,22 @@ content:
             type: file
             options:
               media: media
-
+          - name: thumb
+            label: Thumbnail
+            type: image
+            options:
+              media: media
+  - name: aboutMe
+    label: About me
+    path: src/_data/aboutMe.json
+    type: file
+    fields:
+      - name: title
+        label: Section title
+        type: string
+      - name: description
+        label: Section description
+        type: string
   - name: site
     label: Site settings
     path: src/_data/site.json
@@ -44,4 +59,3 @@ content:
       - name: description
         label: Website description
         type: string
-        description: Will be provused for any page with no description.

@@ -1,0 +1,56 @@
+#portfolio{
+    margin: 0px 20px;
+}
+
+#portfolio .head{
+    background-color: rgb(238, 238, 238);
+    padding: 25px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.media{
+
+}
+
+.media-container{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+@media screen and ( max-width: 758px){
+    .portfolio{
+        margin: 0px 10px;
+    }
+    .media-container{
+        gap: 10px;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+.media-container .vid-container{
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 9/16;
+    position: relative;
+}
+
+.vid-container video{
+    width: 100%;
+    height: 100%;
+    margin-bottom: -4px;
+    object-fit: cover;
+}
+
+.vid-container video[controls]{
+    object-fit: contain;
+}
+
+.vid-container .overlay{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}

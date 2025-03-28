@@ -1,1 +1,46 @@
-<h1>Test</h1>
+<div id="portfolio">
+    <div class="head">
+        <h1>{{aboutMe.title}}</h1>
+        <div>
+            <p>{{aboutMe.description}}</p>
+        </div>
+    </div>
+
+    <div class="media">
+        <h2>Videos</h2>
+        <p>This can be formated and styled however you want. It could be displayed all in one, in sections, on multiple pages, or whatever you think is best.</p>
+        <div class="media-container">
+            {% for media in portfolio.media %}
+            {% if media.published %}
+            <div class="item">
+                <div class="vid-container" onclick="onVideoClick(this)">
+                    <video preload="none" src="{{media.file}}" poster="{{media.thumb}}">
+                    </video>
+                    <div class="overlay">
+                        <svg style="width: 32px; height: 32px; margin-right: 5px; margin-bottom: 5px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-play" viewBox="0 0 16 16">
+                            <path d="M10.804 8 5 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div>
+                    <h3>{{media.title}}</h3>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function onVideoClick(el){
+        const v = el.querySelector("video");
+        if(v.hasAttribute("controls"))
+            return;
+
+        v.play();
+        v.controls = true;
+
+        el.querySelector(".overlay").style.display = "none";
+    }
+</script>
