@@ -14,7 +14,7 @@
             {% if media.published %}
             <div class="item">
                 <div class="vid-container" onclick="onVideoClick(this)">
-                    <video preload="none" src="{{media.file}}" poster="{{media.thumb}}">
+                    <video preload="none" src="{{media.file | relativePath}}" poster="{{media.thumb | relativePath}}">
                     </video>
                     <div class="overlay">
                         <svg style="width: 32px; height: 32px; margin-right: 5px; margin-bottom: 5px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-play" viewBox="0 0 16 16">
