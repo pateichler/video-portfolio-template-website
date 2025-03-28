@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Test portfolio site description.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="public/css/main.css">
+
+        <title>Test portfolio</title>
+    </head>
+    <body>
+        <div id="portfolio">
+    <div class="head">
+        <h1>About me / site links / etc...</h1>
+        <div>
+            <p>Possibly can put quick info and links about you here. This would obviously be styled.</p>
+        </div>
+    </div>
+
+    <div class="media">
+        <h2>Videos</h2>
+        <p>This can be formated and styled however you want. It could be displayed all in one, in sections, on multiple pages, or whatever you think is best.</p>
+        <div class="media-container">
+            
+            
+            <div class="item">
+                <div class="vid-container" onclick="onVideoClick(this)">
+                    <video preload="none" src="public/media/green.mov" poster="public/media/thumbGreen.png">
+                    </video>
+                    <div class="overlay">
+                        <svg style="width: 32px; height: 32px; margin-right: 5px; margin-bottom: 5px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-play" viewBox="0 0 16 16">
+                            <path d="M10.804 8 5 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div>
+                    <h3>First video</h3>
+                </div>
+            </div>
+            
+            
+            
+            <div class="item">
+                <div class="vid-container" onclick="onVideoClick(this)">
+                    <video preload="none" src="public/media/purple.mov" poster="public/media/thumbPurple.png">
+                    </video>
+                    <div class="overlay">
+                        <svg style="width: 32px; height: 32px; margin-right: 5px; margin-bottom: 5px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-play" viewBox="0 0 16 16">
+                            <path d="M10.804 8 5 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div>
+                    <h3>Second video</h3>
+                </div>
+            </div>
+            
+            
+            
+            <div class="item">
+                <div class="vid-container" onclick="onVideoClick(this)">
+                    <video preload="none" src="public/media/blue.mp4" poster="public/media/thumbBlue.png">
+                    </video>
+                    <div class="overlay">
+                        <svg style="width: 32px; height: 32px; margin-right: 5px; margin-bottom: 5px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-play" viewBox="0 0 16 16">
+                            <path d="M10.804 8 5 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div>
+                    <h3>Third video</h3>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function onVideoClick(el){
+        const v = el.querySelector("video");
+        if(v.hasAttribute("controls"))
+            return;
+
+        v.play();
+        v.controls = true;
+
+        el.querySelector(".overlay").style.display = "none";
+    }
+</script>
+    </body>
+</html>
